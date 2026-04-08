@@ -28,7 +28,6 @@
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 1s ease-out forwards',
-                        'slow-pan': 'pan 20s linear infinite',
                     },
                     keyframes: {
                         fadeInUp: {
@@ -56,14 +55,6 @@
             z-index: 50;
             opacity: 0.03;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        }
-        
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
         }
     </style>
 </head>
@@ -100,21 +91,27 @@
                 <span class="h-[1px] w-8 bg-espresso"></span>
             </div>
             
-            <h2 class="font-serif text-6xl md:text-8xl lg:text-9xl mb-8 leading-[1.1] text-espresso">
+            <h2 class="font-serif text-6xl md:text-8xl lg:text-9xl mb-12 leading-[1.1] text-espresso">
                 <span class="block">Coffee in a</span>
                 <span class="block italic text-espresso/90">Heritage Home.</span>
             </h2>
             
-            <p class="text-sm md:text-base italic opacity-80 mb-12 max-w-md mx-auto">
-                "The Tiramisu Latte is a whole vibe." <br>
-                <span class="not-italic text-[10px] font-bold uppercase tracking-widest mt-2 block opacity-60">— Clarence</span>
-            </p>
+            <!-- Hero Review -->
+            <div class="mb-12 max-w-md mx-auto">
+                <p class="text-sm md:text-base italic opacity-80 mb-4">"The Tiramisu Latte is a whole vibe."</p>
+                <div class="flex items-center justify-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-espresso/10 flex items-center justify-center border border-espresso/20">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-espresso/50"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest opacity-60">— Clarence</span>
+                </div>
+            </div>
             
             <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
                 <a href="#menu" class="bg-espresso text-cream px-10 py-4 rounded-full uppercase text-xs font-bold tracking-[0.2em] shadow-xl hover:bg-espresso/90 hover:-translate-y-1 transition duration-300">
                     View Menu
                 </a>
-                <a href="#location" class="group flex items-center gap-2 px-6 py-4 uppercase text-xs font-bold tracking-[0.2em] hover:text-caramel transition duration-300">
+                <a href="https://maps.app.goo.gl/C2D9rvb88VGRSPg4A" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 px-6 py-4 uppercase text-xs font-bold tracking-[0.2em] hover:text-caramel transition duration-300">
                     Get Directions
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
@@ -125,25 +122,34 @@
     <!-- Vibe & Story Section -->
     <section id="vibe" class="py-24 px-6 bg-white/50 border-y border-espresso/5 relative">
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Vibe Review Block -->
             <div class="order-2 lg:order-1 relative">
-                <!-- Abstract Image Placeholder / Decorative Box -->
                 <div class="aspect-[4/5] md:aspect-square bg-espresso/5 rounded-t-full rounded-b-[2rem] border border-espresso/10 p-8 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-espresso via-transparent to-transparent"></div>
                     
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="text-espresso/20"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                     
                     <div class="relative z-10">
-                        <p class="font-serif text-2xl md:text-3xl lg:text-4xl italic leading-tight text-espresso mb-6">
+                        <p class="font-serif text-2xl md:text-3xl lg:text-4xl italic leading-tight text-espresso mb-8">
                             "Very accommodating staff and owners. Delicious food and drinks! 🥰"
                         </p>
-                        <span class="flex items-center gap-3 text-[10px] font-sans font-bold uppercase tracking-widest opacity-60">
-                            <span class="w-6 h-[1px] bg-espresso"></span>
-                            Jaymart Certiza
-                        </span>
+                        
+                        <!-- Anonymous Reviewer Profile -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-cream flex items-center justify-center border border-espresso/10 shadow-sm">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-espresso/40"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                            </div>
+                            <div>
+                                <span class="block text-[11px] font-sans font-bold uppercase tracking-widest opacity-80">Jaymart Certiza</span>
+                                <span class="block text-[9px] uppercase tracking-widest opacity-50 mt-1">Local Guide</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Vibe Text Block -->
             <div class="order-1 lg:order-2">
                 <h3 class="font-serif text-5xl md:text-6xl mb-8 text-espresso">
                     Cozy indoors. <br>
@@ -192,7 +198,7 @@
                     <div class="flex justify-between items-end mb-2">
                         <h4 class="font-bold text-xl uppercase tracking-tight text-espresso group-hover:text-caramel transition">Tiramisu Latte</h4>
                     </div>
-                    <p class="text-sm opacity-70 italic leading-relaxed">Creamy, frothy, an elite pairing biscuit. "A whole vibe."</p>
+                    <p class="text-sm opacity-70 italic leading-relaxed">Creamy, frothy, an elite pairing biscuit.</p>
                 </div>
                 
                 <!-- Item 2 -->
@@ -263,23 +269,27 @@
                 </div>
 
                 <div>
-                    <a href="http://google.com/maps?q=28+A.M.+De+Leon+Taytay" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-cream text-espresso px-8 py-4 rounded-full font-bold uppercase text-[10px] tracking-widest hover:bg-caramel hover:text-cream transition duration-300 shadow-lg">
+                    <a href="https://maps.app.goo.gl/C2D9rvb88VGRSPg4A" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-cream text-espresso px-8 py-4 rounded-full font-bold uppercase text-[10px] tracking-widest hover:bg-caramel hover:text-cream transition duration-300 shadow-lg">
                         Get Directions
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </div>
             
-            <div class="rounded-[2.5rem] border border-cream/10 bg-gradient-to-br from-cream/5 to-transparent p-10 md:p-16 flex flex-col justify-center items-center text-center relative">
+            <!-- Location Review Block -->
+            <div class="rounded-[2.5rem] border border-cream/10 bg-gradient-to-br from-cream/5 to-transparent p-10 md:p-14 flex flex-col justify-center items-center text-center relative">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" class="text-caramel/20 absolute top-8 left-8"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                 
                 <p class="font-serif text-2xl md:text-3xl italic opacity-90 leading-snug mb-8 relative z-10 pt-4">
                     "Pastries are good. Quiet and easy to talk... good neighborhood cafe experience. Spacious outdoor area."
                 </p>
-                <div class="flex items-center gap-4 text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-caramel">
-                    <span class="w-8 h-[1px] bg-caramel/50"></span>
-                    Angela B.
-                    <span class="w-8 h-[1px] bg-caramel/50"></span>
+                
+                <!-- Anonymous Reviewer Profile -->
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-caramel/20 flex items-center justify-center border border-caramel/30">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-caramel/80"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <span class="text-[11px] font-sans font-bold uppercase tracking-[0.2em] text-caramel">Angela B.</span>
                 </div>
             </div>
         </div>
@@ -291,7 +301,7 @@
             <a href="https://www.instagram.com/28oldhousecafe" target="_blank" rel="noopener noreferrer" class="text-cream/50 hover:text-caramel transition p-2" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
-            <a href="http://google.com/maps?q=28+A.M.+De+Leon+Taytay" target="_blank" rel="noopener noreferrer" class="text-cream/50 hover:text-caramel transition p-2" aria-label="Google Maps">
+            <a href="https://maps.app.goo.gl/C2D9rvb88VGRSPg4A" target="_blank" rel="noopener noreferrer" class="text-cream/50 hover:text-caramel transition p-2" aria-label="Google Maps">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             </a>
         </div>
